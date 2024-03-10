@@ -1,14 +1,11 @@
 ---
 const pageTitle = "About";
-
 const identity = {
    firstName: "Gabe",
-   lastName: "Lepoutre",
    country: "US",
    occupation: "Junior Test Engineer",
    hobbies: ["video games", "cars", "electronics", "programming", "another hobby"]
 };
-
 const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "Python", "C", "ARM Cortex M0", "Raspberry Pi"];
 ---
 
@@ -33,11 +30,11 @@ const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "Python", "C", "A
       <h1>{pageTitle}</h1>
       <p>Some facts about me:</p>
       <ul>
-         <li>My name is {identity.firstName} {identity.lastName}</li>
-         <li>I am a {identity.occupation} located in the {identity.country}</li>
+         <li>My name is {identity.firstName}</li>
+         <li>I am a {identity.occupation.toLowerCase()} located in the {identity.country}</li>
          <li>My hobbies are:
             <ul>
-               {identity.hobbies.map((hobbies) => <li>{hobbies}</li>)}
+               {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
             </ul>
          </li>
       </ul>
