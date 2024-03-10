@@ -1,4 +1,5 @@
 ---
+const pageTitle = "Blog"
 ---
 
 <html lang="en">
@@ -8,17 +9,18 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} >
 		<title>
-			GLepo - Blog
+			GLepo - 
+         {pageTitle}
 		</title>
 	</head>
 	<body>
       <!-- Link tree -->
       <a href="/">Home</a>
       <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
+      <a href="/blog/">{pageTitle}</a>
 
       <!-- Content -->
-		<h1>Blog Page</h1>
+		<h1>{pageTitle}</h1>
       <h2>Posts</h2>
       <ul>
          <li>March 10th, 2024 - <a href="/posts/post-20240310-1/">Post 1</a></li>
