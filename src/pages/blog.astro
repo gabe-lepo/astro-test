@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "Blog";
 ---
 
@@ -14,17 +16,27 @@ const pageTitle = "Blog";
 		</title>
 	</head>
 	<body>
-      <!-- Link tree -->
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">{pageTitle}</a>
+		<div class="header">
+			Header
+		</div>
 
-      <!-- Content -->
-		<h1>{pageTitle}</h1>
-      <h2>Posts</h2>
-      <ul>
-         <li>March 10th, 2024 - <a href="/posts/post-20240310-1/">Post 1</a></li>
-         <li><a href="">Temp</a></li>
-      </ul>
+		<div class="navbar">
+			<a href="/">Home</a>
+			<a href="/about/">About</a>
+			<a href="/blog/">{pageTitle}</a>
+		</div>
+
+		<div class="content">
+			<h1>{pageTitle}</h1>
+			<h2>Posts</h2>
+			<ul>
+				<li>March 10th, 2024 - <a href="/posts/post-20240310-1/">Post 1</a></li>
+				<li><a href="">Temp</a></li>
+			</ul>
+		</div>
+
+		<div class="footer">
+			Footer
+		</div>
 	</body>
 </html>

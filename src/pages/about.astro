@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "About";
 const identity = {
    firstName: "Gabe",
@@ -21,26 +23,36 @@ const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "Python", "C", "A
 		</title>
 	</head>
 	<body>
-      <!-- Link tree -->
-      <a href="/">Home</a>
-      <a href="/about/">{pageTitle}</a>
-      <a href="/blog/">Blog</a>
+      <div class="header">
+         Header
+      </div>
 
-		<!-- Content -->
-      <h1>{pageTitle}</h1>
-      <p>Some facts about me:</p>
-      <ul>
-         <li>My name is {identity.firstName}</li>
-         <li>I am a {identity.occupation.toLowerCase()} located in the {identity.country}</li>
-         <li>My hobbies are:
-            <ul>
-               {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
-            </ul>
-         </li>
-      </ul>
-      <p>My programming skills include:</p>
-      <ul>
-         {skills.map((skill) => <li>{skill}</li>)}
-      </ul>
+      <div class="navbar">
+         <a href="/">Home</a>
+         <a href="/about/">{pageTitle}</a>
+         <a href="/blog/">Blog</a>
+      </div>
+
+      <div class="content">
+         <h1>{pageTitle}</h1>
+         <p>Some facts about me:</p>
+         <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>I am a {identity.occupation.toLowerCase()} located in the {identity.country}</li>
+            <li>My hobbies are:
+               <ul>
+                  {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
+               </ul>
+            </li>
+         </ul>
+         <p>My programming skills include:</p>
+         <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+         </ul>
+      </div>
+
+      <div class="footer">
+         Footer
+      </div>
 	</body>
 </html>
