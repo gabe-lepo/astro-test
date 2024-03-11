@@ -1,0 +1,56 @@
+---
+import '../styles/global.css'
+
+const pageTitle = "About";
+const identity = {
+   firstName: "Gabe",
+   country: "US",
+   occupation: "Junior Test Engineer",
+   hobbies: ["video games", "cars", "electronics", "programming", "another hobby"]
+};
+const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "Python", "C", "ARM Cortex M0", "Raspberry Pi"];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} >
+		<title>
+			GLepo - 
+         {pageTitle}
+		</title>
+	</head>
+	<body>
+      <div class="header">
+         <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">{pageTitle}</a></li>
+            <li><a href="/blog/">Blog</a></li>
+         </ul>
+      </div>
+
+      <div class="content">
+         <h1>{pageTitle}</h1>
+         <p>Some facts about me:</p>
+         <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>I am a {identity.occupation.toLowerCase()} located in the {identity.country}</li>
+            <li>My hobbies are:
+               <ul>
+                  {identity.hobbies.map((hobby) => <li>{hobby}</li>)}
+               </ul>
+            </li>
+         </ul>
+         <p>My programming skills include:</p>
+         <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+         </ul>
+      </div>
+
+      <div class="footer">
+         Footer
+      </div>
+	</body>
+</html>

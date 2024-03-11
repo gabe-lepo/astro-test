@@ -1,0 +1,77 @@
+/*Complementary duo-triadic color palette
+Head
+   Background: #0F34EA
+   Foreground: #090F31
+   Text: #F1A204
+Content
+   Background: #F3E1BC
+   Foreground: #132DAD
+   Text: #090F31
+*/
+
+/*Global resets*/
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+
+/*<html> and <body> resets*/
+html {
+   font-family: sans-serif;
+}
+
+body {
+   margin: 0 auto;
+   line-height: 1.5;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+/*Page structure resets*/
+.header {
+   background-color: #0F34EA;
+   color: #F1A204;
+}
+
+.navbar {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+}
+.navbar li {
+   float: left;
+}
+.navbar li a{
+   display: block;
+   text-align: center;
+   padding: 0.5rem 1rem;
+   text-decoration: none;
+   color: #F3E1BC;
+}
+.navbar li a:hover {
+   color: #0F34EA;
+   background-color: #F3E1BC;
+}
+.content {
+   background-color: #F3E1BC;
+   color: #090F31;
+   flex: 1;
+}
+.footer {
+   background-color: #090F31;
+   color: #F1A204;
+   height: 3rem;
+}
+
+/*Other element-specific resets*/
+h1 {
+   color: #0F34EA;
+   font-size: 6rem;
+   font-weight: bolder;
+}
+h2 {
+   color: #090F31;
+   font-size: 4rem;
+   font-weight: bolder;
+}

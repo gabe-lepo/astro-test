@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css'
 
-const pageTitle = "Home";
+const pageTitle = "Blog";
 ---
 
 <html lang="en">
@@ -12,20 +12,25 @@ const pageTitle = "Home";
 		<meta name="generator" content={Astro.generator} >
 		<title>
 			GLepo - 
-			{pageTitle}
+         {pageTitle}
 		</title>
 	</head>
 	<body>
 		<div class="header">
          <ul class="navbar">
-            <li><a href="/">{pageTitle}</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/blog/">{pageTitle}</a></li>
          </ul>
       </div>
 
 		<div class="content">
 			<h1>{pageTitle}</h1>
+			<h2>Posts</h2>
+			<ul>
+				<li>March 10th, 2024 - <a href="/posts/post-20240310-1/">Post 1</a></li>
+				<li><a href="">Temp</a></li>
+			</ul>
 		</div>
 
 		<div class="footer">
